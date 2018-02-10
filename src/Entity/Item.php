@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * Created by PhpStorm.
+ * User: dominik.wolf
+ * Date: 28.01.2018
+ * Time: 11:39
+ */
+
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
@@ -21,7 +28,7 @@ class Item
      *
      * @ORM\Column(name="name", type="text")
      */
-    private $name;
+    private $name='';
 
     /**
      * @var string
@@ -62,9 +69,9 @@ class Item
     /**
      * Get id
      *
-     * @return int
+     * @return int|null
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
@@ -112,7 +119,7 @@ class Item
      *
      * @return string
      */
-    public function getDescription(): string
+    public function getDescription(): ?string
     {
         return $this->description;
     }
@@ -136,7 +143,7 @@ class Item
      *
      * @return \DateTime
      */
-    public function getCreatedAt(): \DateTime
+    public function getCreatedAt(): ?\DateTime
     {
         return $this->createdAt;
     }
@@ -160,7 +167,7 @@ class Item
      *
      * @return bool
      */
-    public function getInUse(): bool
+    public function getInUse(): ?bool
     {
         return $this->inUse;
     }
@@ -184,7 +191,7 @@ class Item
      *
      * @return string
      */
-    public function getImagePath(): string
+    public function getImagePath(): ?string
     {
         return $this->imagePath;
     }
@@ -208,7 +215,7 @@ class Item
      *
      * @return \DateTime
      */
-    public function getUpdatedAt(): \DateTime
+    public function getUpdatedAt(): ?\DateTime
     {
         return $this->updatedAt;
     }
