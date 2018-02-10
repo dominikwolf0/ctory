@@ -39,3 +39,11 @@
 
 # Backup entities generated with doctrine:generate:entities command
 **/Entity/*~
+
+# custom ignores
+.idea/
+composer.phar
+/vendor/
+.env
+/node_modules/
+/public/build/
